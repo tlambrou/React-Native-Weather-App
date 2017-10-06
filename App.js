@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
+    //use the darksky api to avoid hardcoding
+    //be careful with whitespaces within the component tags. it can cause issues
   render() {
     return (
       <View style={styles.container}>
@@ -9,7 +11,7 @@ export default class App extends React.Component {
           <Text style={styles.city}>San Francisco</Text>
           <Text style={styles.fullDate}>Sunday, October 1</Text>
         </View>
-        <Text style={styles.temp}>57˚</Text>
+        <Text style={styles.temp}>57</Text>
         <Text style={styles.weatherDesc}>Partly Cloudy</Text>
         <View style={styles.humidityContainer}>
           <Text style={styles.humidityTitle}>Humidity</Text>
@@ -25,13 +27,14 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    //stick with single quotes. be consistent
   container: {
     flex: 1,
     height: "50%",
     display: 'flex',
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   cityDate: {
     alignItems: 'center',
@@ -41,7 +44,7 @@ const styles = StyleSheet.create({
     fontSize: 34,
   },
   fullDate: {
-    fontWeight: '200',
+    fontWeight: '200'
   },
   temp: {
     alignItems: 'center',
@@ -57,11 +60,10 @@ const styles = StyleSheet.create({
     width: "50%"
   },
   humidityTitle: {
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   humidity: {
-    justifyContent: 'flex-end',
-
+    justifyContent: 'flex-end'
   },
   windContainer: {
     alignItems: 'center',
@@ -71,11 +73,10 @@ const styles = StyleSheet.create({
   },
   windTitle: {
     width: "50%",
-
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end' //don't include commas at the end
 
   },
   wind: {
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
 })

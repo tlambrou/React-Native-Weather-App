@@ -14,12 +14,12 @@ export default class WeekDayTemp extends React.Component {
       { day: "Sat", temp: "77˚"},
       { day: "Sun", temp: "79˚"}
     ]
-
+    //indent components
     const weekDayTemps = dayTemps.map((dayTemp) => {
       return (
         <View style={styles.container} >
-        <Text style={styles.day}>{dayTemp.day}</Text>
-        <Text style={styles.temp}>{dayTemp.temp}</Text>
+            <Text style={styles.day}>{dayTemp.day}</Text>
+            <Text style={styles.temp}>{dayTemp.temp}</Text>
         </View>
       )
     })
@@ -32,6 +32,6 @@ export default class WeekDayTemp extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    
+      //fill these out
   }
 });
